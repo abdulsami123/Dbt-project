@@ -34,8 +34,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   snowflake_workshop:
     staging:
-      materialized: view
+      +materialized: view
       snowflake_warehouse: first_wh
     marts:
-      materialized: table
+      +materialized: table
       snowflake_warehouse: first_wh

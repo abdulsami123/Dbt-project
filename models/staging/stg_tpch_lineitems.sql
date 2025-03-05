@@ -1,8 +1,9 @@
+-- surrogate key generated using function in Dbt
+-- surrogate key used since this table didn't have its own PK
+-- This concatenates the specified fields and applies a hash function to produce a unique ID.
+
 select
     {{
-        -- surrogate key generated using function in Dbt
-        -- surrogate key used since this table didn't have its own PK
-        -- This concatenates the specified fields and applies a hash function to produce a unique ID.
         dbt_utils.generate_surrogate_key([
             'l_orderkey',
             'l_linenumber'
